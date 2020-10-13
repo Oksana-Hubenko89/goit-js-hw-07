@@ -33,10 +33,10 @@ function invalidLenght() {
   validator.classList.add('invalid');
 }
 function onValidation() {
-  if (validator.value.length < validator.dataset.length) {
-    invalidLenght();
-  } else {
+  if (validator.value.length == validator.dataset.length) {
     validLenght();
+  } else {
+    invalidLenght();
   }
 }
 validator.addEventListener('blur', onValidation);

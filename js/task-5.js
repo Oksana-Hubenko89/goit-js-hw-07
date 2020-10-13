@@ -5,9 +5,13 @@ const inputRef = {
   input: document.querySelector('#name-input'),
   span: document.querySelector('#name-output'),
 };
-
-function onInputChange(event) {
-  console.log('input');
-  inputRef.span.textContent = event.currentTarget.value;
-}
 inputRef.input.addEventListener('input', onInputChange);
+function onInputChange(event) {
+  if (event.currentTarget.value.length !== 0) {
+    inputRef.span.textContent = event.currentTarget.value;
+  } else {
+    inputRef.span.textContent = 'незнакомец';
+  }
+  
+}
+

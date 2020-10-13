@@ -23,26 +23,33 @@
 //   .join('\n');
 // console.log(categoriesArray);
 
-const categories = document.querySelector('#categories').children;
+//const categories = document.querySelector('#categories').children;
+//console.log(`В списке ${categories.length} категории.`);
+
+// const firstCategories = document.querySelector('.item').children[0];
+
+// const firstCategoriesNumberEl = document.querySelector('.item').children[1]
+//   .children.length;
+// console.log(`Категория: ${firstCategories.textContent}`);
+// console.log(`Количество элементов: ${firstCategoriesNumberEl}`);
+
+// const secondCategories = document.querySelector('#categories').children[1]
+//   .firstElementChild.textContent;
+// const secondCategoriesNumberEl = document.querySelector('#categories')
+//   .children[1].lastElementChild.children.length;
+// console.log(`Категория: ${secondCategories}`);
+// console.log(`Количество элементов: ${secondCategoriesNumberEl}`);
+
+// const thirdCategories = document.querySelector('#categories').children[2]
+//   .firstElementChild.textContent;
+// const thirdCategoriesNumberEl = document.querySelector('#categories')
+//   .children[2].lastElementChild.children.length;
+// console.log(`Категория: ${thirdCategories}`);
+// console.log(`Количество элементов: ${thirdCategoriesNumberEl}`);
+const categories = document.querySelectorAll('li.item');
+let i = 0;
 console.log(`В списке ${categories.length} категории.`);
-
-const firstCategories = document.querySelector('.item').children[0];
-
-const firstCategoriesNumberEl = document.querySelector('.item').children[1]
-  .children.length;
-console.log(`Категория: ${firstCategories.textContent}`);
-console.log(`Количество элементов: ${firstCategoriesNumberEl}`);
-
-const secondCategories = document.querySelector('#categories').children[1]
-  .firstElementChild.textContent;
-const secondCategoriesNumberEl = document.querySelector('#categories')
-  .children[1].lastElementChild.children.length;
-console.log(`Категория: ${secondCategories}`);
-console.log(`Количество элементов: ${secondCategoriesNumberEl}`);
-
-const thirdCategories = document.querySelector('#categories').children[2]
-  .firstElementChild.textContent;
-const thirdCategoriesNumberEl = document.querySelector('#categories')
-  .children[2].lastElementChild.children.length;
-console.log(`Категория: ${thirdCategories}`);
-console.log(`Количество элементов: ${thirdCategoriesNumberEl}`);
+categories.forEach(element=>
+  console.log(`Категория: ${element.children[i].textContent} 
+  Количество элементов: ${element.children[i+1].children.length}`),
+);
