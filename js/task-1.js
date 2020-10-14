@@ -47,9 +47,9 @@
 // console.log(`Категория: ${thirdCategories}`);
 // console.log(`Количество элементов: ${thirdCategoriesNumberEl}`);
 const categories = document.querySelectorAll('li.item');
-let i = 0;
+
 console.log(`В списке ${categories.length} категории.`);
 categories.forEach(element=>
-  console.log(`Категория: ${element.children[i].textContent} 
-  Количество элементов: ${element.children[i+1].children.length}`),
+  console.log(`Категория: ${element.children[0].textContent} 
+  Количество элементов: ${element.children[1].children.length}`),
 );
